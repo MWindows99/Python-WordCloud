@@ -26,7 +26,8 @@ You can run this program with this command. After you ran "main.py", please wait
 # Font
 This program contains the following fonts. 
  ## Ricty Diminished
- Watch [License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl).
+ ・Watch with [GitHub](https://github.com/edihbrandon/RictyDiminished)
+ ・Watch [License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl).
 
 # Let's Enjoy!
 Enjoy the wordcloud.
