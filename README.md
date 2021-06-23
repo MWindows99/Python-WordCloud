@@ -13,10 +13,10 @@ You need to install these library.
  ## emoji lib
      pip3 install emoji --upgrade
      
-# How to USE
-1.Input Twitter API Key to "config.py" and "ptw.py".
+# Before USE
+1. Input Twitter API Key to "config.py" and "ptw.py".
 <br>
-2.Input your Twitter User ID to "gettimeline.py".
+2. Input your Twitter User ID to "gettimeline.py".
 <br>
 That's all.
 
