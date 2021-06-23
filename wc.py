@@ -6,7 +6,7 @@ from wordcloud import WordCloud
 from bs4 import BeautifulSoup
 from collections import Counter, defaultdict
 
-# 名詞だけ抽出、単語をカウント
+# 名詞抽出&カウント
 def counter(texts):
     t = Tokenizer()
     words_count = defaultdict(int)
@@ -17,7 +17,7 @@ def counter(texts):
             # 品詞から名詞だけ抽出
             pos = token.part_of_speech.split(',')[0]
             if pos in ['名詞']:
-                # 必要ない単語を省く(実際の結果を見てから不必要そうな単語を記載しました)
+                # 必要ない単語を省く(不必要な単語)
                 if token.base_form not in ["こと", "よう", "そう", "これ", "それ"]:
                     words_count[token.base_form] += 1
                     words.append(token.base_form)
@@ -34,7 +34,7 @@ with open('./output/tweet_data', 'r') as f:
 words_count, words = counter(texts)
 text = ' '.join(words)
 
-# fontは自分の端末にあるものを使用する
+# Fontを読み込む
 fpath = "RictyDiminished/RictyDiminished-Bold.ttf"
 wordcloud = WordCloud(background_color="white",
                       font_path=fpath, width=900, height=500).generate(text)
