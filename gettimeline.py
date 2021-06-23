@@ -4,23 +4,23 @@ from requests_oauthlib import OAuth1Session
 from time import sleep
 import emoji
 
-# 絵文字を除去する
+# 絵文字を除去
 def remove_emoji(src_str):
     return ''.join(c for c in src_str if c not in emoji.UNICODE_EMOJI)
 
-# APIキー設定(別ファイルのconfig.pyで定義しています)
+# APIキー設定 (CONFIGファイルを参照)
 CK = config.CONSUMER_KEY
 CS = config.CONSUMER_SECRET
 AT = config.ACCESS_TOKEN
 ATS = config.ACCESS_TOKEN_SECRET
 
-# 認証処理
+# Twitter API 認証処理
 twitter = OAuth1Session(CK, CS, AT, ATS)
 
 # タイムライン取得エンドポイント
 url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
 
-# パラメータの定義
+# パラメータ定義 (Screen Nameに"@"以降のTwitter IDを入れる)
 params = {'screen_name': 'MWindows99',
           'exclude_replies': True,
           'include_rts': False,
@@ -32,7 +32,7 @@ f_out = open('./output/tweet_data', 'w')
 for j in range(100):
     res = twitter.get(url, params=params)
     if res.status_code == 200:
-        # API残り回数
+        # API残り回数を表示
         limit = res.headers['x-rate-limit-remaining']
         print("API remain: " + limit)
         if limit == 1:
