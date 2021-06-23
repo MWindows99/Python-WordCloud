@@ -15,9 +15,7 @@ You need to install these library.
      
 # Before USE
 1. Input Twitter API Key to "config.py" and "ptw.py".
-<br>
 2. Input your Twitter User ID to "gettimeline.py".
-<br>
 That's all.
 
 # How to run
