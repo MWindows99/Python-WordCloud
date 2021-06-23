@@ -13,6 +13,9 @@ You need to install these library.
  ## emoji lib
      pip3 install emoji --upgrade
 
+# Settings
+## You need to input Twitter API Key to "gettimeline.py" and "ptw.py".
+
 # How to run
 You can run this program with this command. After you ran "main.py", please wait to finish the progress.
  ## Command
