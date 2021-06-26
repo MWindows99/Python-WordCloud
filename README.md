@@ -12,6 +12,8 @@ You need to install these library.
      pip3 install wordcloud
  ## emoji lib
      pip3 install emoji --upgrade
+ ## tweepy
+     pip3 install tweepy
      
 # Before USE
 1. Input Twitter API Key to "config.py" and "ptw.py".
