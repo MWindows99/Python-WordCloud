@@ -21,7 +21,7 @@ twitter = OAuth1Session(CK, CS, AT, ATS)
 url = "https://api.twitter.com/1.1/statuses/user_timeline.json"
 
 # パラメータ定義 (Screen Nameに"@"以降のTwitter IDを入れる)
-params = {'screen_name': 'MWindows99',
+params = {'screen_name': 'ID',
           'exclude_replies': True,
           'include_rts': False,
           'count': 200}
@@ -32,7 +32,7 @@ f_out = open('./output/tweet_data', 'w')
 for j in range(100):
     res = twitter.get(url, params=params)
     if res.status_code == 200:
-        # API残り回数を表示
+        # API残り回数
         limit = res.headers['x-rate-limit-remaining']
         print("API remain: " + limit)
         if limit == 1:
