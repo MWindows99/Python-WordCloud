@@ -1,4 +1,4 @@
-# Welcome
+# WordCloud
 This tool creates "wordcloud png data" and posts it on Twitter (FILE NAME:wordcloud_sample.png). This program runs on python3.
 This program has been tested in a Python 3 environment. 
 
@@ -14,6 +14,8 @@ You need to install these library.
      pip3 install emoji --upgrade
  ## tweepy
      pip3 install tweepy
+ ## Beautifulsoup4
+     pip3 install bs4
      
 # Before USE
 1. Input Twitter API Key to "config.py" and "ptw.py".
