@@ -22,7 +22,7 @@ You need to install these library.
 2. Input your Twitter User ID to "gettimeline.py".
 3. That's all.
 
-# How to run
+# Usage
 You can run this program with this command. After you ran "main.py", please wait to finish the progress.
  ## Command
      python3 main.py
